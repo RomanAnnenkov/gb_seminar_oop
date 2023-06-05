@@ -26,5 +26,11 @@ public class MainClassForSeminarFour {
         System.out.println(teamArchers);
         System.out.println("-----------");
         System.out.println(teamInfantryman);
+
+
+        Battle battle1 = new Battle(new Infantryman("John", 150,new Axe()), (new Archer("Robin", 100, new Bow())));
+
+        battle1.fight();
+
     }
 }
