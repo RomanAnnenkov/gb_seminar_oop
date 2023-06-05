@@ -4,12 +4,12 @@ import seminar4.weapons.Weapon;
 
 import java.util.Random;
 
-public abstract class Warrior {
+public abstract class Warrior<W extends Weapon> {
     private final String name;
     private int healthPoint;
-    private Weapon weapon;
+    private W weapon;
 
-    public Warrior(String name, int healthPoint, Weapon weapon) {
+    public Warrior(String name, int healthPoint, W weapon) {
         this.name = name;
         this.healthPoint = healthPoint;
         this.weapon = weapon;
@@ -23,7 +23,7 @@ public abstract class Warrior {
         return healthPoint;
     }
 
-    public Weapon getWeapon() {
+    public W getWeapon() {
         return weapon;
     }
 
@@ -31,7 +31,7 @@ public abstract class Warrior {
         this.healthPoint = healthPoint;
     }
 
-    public void setWeapon(Weapon weapon) {
+    public void setWeapon(W weapon) {
         this.weapon = weapon;
     }
 
@@ -41,7 +41,7 @@ public abstract class Warrior {
         return rnd.nextInt(0, weapon.damage() + 1);
     }
 
-    public void rediceHealth(int damage) {
+    public void reduceHealth(int damage) {
         healthPoint -= damage;
         if (healthPoint < 0) {
             healthPoint = 0;
