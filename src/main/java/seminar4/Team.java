@@ -56,9 +56,9 @@ public class Team<T extends Warrior> implements Iterable<T> {
         for (T t : this) {
             builder.append(t).append('\n');
         }
-        builder.append(String.format("TeamAttack: %d", getTeamAttack()));
-        builder.append(String.format("TeamHealth: %d", getTeamHealth()));
-        builder.append(String.format("TeamRange: %d", maxAttackDistance()));
+        builder.append(String.format("TeamAttack: %d ", getTeamAttack()));
+        builder.append(String.format("TeamHealth: %d ", getTeamHealth()));
+        builder.append(String.format("TeamRange: %d ", maxAttackDistance()));
         return builder.toString();
     }
 }

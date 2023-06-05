@@ -11,4 +11,9 @@ public class CrossBow implements Ranged{
         return 100;
     }
 
+    @Override
+    public String toString() {
+        return String.format("CrossBow: %d ", damage());
+    }
+
 }

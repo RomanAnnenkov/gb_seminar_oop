@@ -5,4 +5,9 @@ public class Sword implements Melee{
     public int damage() {
         return 4;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Sword: %d ", damage());
+    }
 }

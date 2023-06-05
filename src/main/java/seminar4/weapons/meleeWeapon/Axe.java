@@ -6,4 +6,8 @@ public class Axe implements Melee{
         return 5;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Axe: %d ", damage());
+    }
 }
