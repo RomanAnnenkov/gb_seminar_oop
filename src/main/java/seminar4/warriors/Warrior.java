@@ -41,11 +41,15 @@ public abstract class Warrior {
         return rnd.nextInt(0, weapon.damage() + 1);
     }
 
-    public void rediceHealth(int damage){
+    public void rediceHealth(int damage) {
         healthPoint -= damage;
         if (healthPoint < 0) {
             healthPoint = 0;
         }
     }
 
+    @Override
+    public String toString() {
+        return String.format("Name: %s, Weapon: %s, HealthPoint: %d", name, weapon, healthPoint);
+    }
 }

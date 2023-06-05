@@ -10,5 +10,5 @@ public class CrossBow implements Ranged{
     public int distance() {
         return 100;
     }
-    
+
 }
